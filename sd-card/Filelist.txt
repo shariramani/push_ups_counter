@@ -1,0 +1,11 @@
+sd:/mp3/: piano
+sd:/02/: tabla
+sd:/03/:windchime
+sd:/04/:numbers
+
+
+Do not copy this file to sd card.
+Copy folders mp3 and two digit folders
+
+https://www.shockwave-sound.com/free-sound-effects/wind-chimes-sounds
+http://www.findsounds.com/ISAPI/search.dll?start=11&keywords=wind%20chimes&seed=8
