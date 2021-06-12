@@ -92,9 +92,9 @@ extern "C" {                                          // ESP8266 SDK C functions
 //WiFi  Section
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const char* ssid     = "Suresh";
-const char* password = "mvls$1488";
-  IPAddress staticIP(192, 168, 1, 154);
+const char* ssid     = "mySSIDname";    //Your WiFi SSID name
+const char* password = "myWiFiPassword";  //Your WiFi password
+  IPAddress staticIP(192, 168, 1, 154);   // IP Address you want to assign
   IPAddress gateway(192, 168, 1, 1);
   IPAddress subnet(255, 255, 255, 0);
   IPAddress dnsIP1(192, 168, 1, 1);
