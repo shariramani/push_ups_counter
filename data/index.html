@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ESP8266 WindChime and Couter</title>
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<p>ESP Time: <strong> %ESP_TIME% </strong></p> 
+<p>what would you like to play?</p>
+
+<form action="/">
+<input type="checkbox" name="Piano" value="Piano" %PianoState%>Piano<br>
+<input type="checkbox" name="Tabla" value="Tabla" %TablaState%>Tabla<br>
+<input type="checkbox" name="WindChime" value="WindChime" %WindChimeState%>WindChime<br>
+<input type="checkbox" name="Random" value="Random" %RandomState%>Random<br>
+<input type="checkbox" name="Counter" value="Counter" %CounterState%>Counter<br>
+<input type="checkbox" name="Distance" value="Distance" %DistanceState%>Distance<br>
+<br>
+<input type="checkbox" name="ResetCounter" value="ResetCounter" >Reset Counter<br>
+
+
+
+<p>VOLUME</p>
+<left><input type="range" min="0" max="30" value=%volume% step="1" onchange="showVolume(this.value)" size="80" align="left" > </input></left>
+<span id="range"></span>
+<script type="text/javascript">function showVolume(newValue){document.getElementById("range").innerHTML=newValue;var req = new XMLHttpRequest();req.open('GET', '?' + 'volume=' + newValue, true);req.send();}</script>
+
+
+<p>Scroll Speed</p>
+<left><input type="range" min="0" max="100" value=speedTime step="5" onchange="showSpeed(this.value)" size="80" align="left" > </input></left>
+<span id="range"></span>
+<script type="text/javascript">function showSpeed(newValue){document.getElementById("range").innerHTML=newValue;var req = new XMLHttpRequest();req.open('GET', '?' + 'speedTime=' + newValue, true);req.send();}</script>
+
+
+<br>Welcome Message:  <br>
+<input type="text" name="WelcomeMsg" value="Touch Less Musical Instruments"><br>
+
+<br>Settings:  <br>
+<input type="textbox" name="sensitivity" value=%sensitivity% >Sensitivity (mm)<br>
+<input type="textbox" name="minRange" value=%minRange% >minRange (mm)<br>
+<input type="textbox" name="maxRange" value=%maxRange% >maxRange (mm)<br>
+<input type="textbox" name="waitAfterPlay" value=%waitAfterPlay% >waitAfterPlay (ms)<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+
+</body></html>
+
